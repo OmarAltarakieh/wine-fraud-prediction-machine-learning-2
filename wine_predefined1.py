@@ -9,7 +9,6 @@ st.set_page_config(page_title="Wine Type Prediction- ML assighmenet - Omar altar
 @st.experimental_memo
 def load_data():
     data = pd.read_csv('wine_fraud.csv')
-    # If any preprocessing is to be done, it can be added here
     return data
 
 wine_data = load_data()
