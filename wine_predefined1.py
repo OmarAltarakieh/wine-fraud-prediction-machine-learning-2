@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# This should be the first command in your script
+
 st.set_page_config(page_title="Wine Type Prediction- ML assighmenet - Omar altarakieh", layout="wide")
 
-# Load the dataset
+#  dataset
 @st.experimental_memo
 def load_data():
     data = pd.read_csv('wine_fraud.csv')
@@ -14,10 +14,10 @@ def load_data():
 
 wine_data = load_data()
 
-# Load the trained RandomForest model
+#  the trained RandomForest model
 model = joblib.load('wine_rf_clf_8-11.pkl')
 
-# Load the label encoder
+#  the label encoder
 label_encoder = joblib.load('label_encoder.pkl')  # Ensure this is the correct path to your label encoder file
 
 # Define a function to make predictions
@@ -44,7 +44,7 @@ pH = st.number_input('pH', min_value=0.0, format="%.2f")
 sulphates = st.number_input('Sulphates', min_value=0.0, format="%.2f")
 alcohol = st.number_input('Alcohol', min_value=0.0, format="%.2f")
 
-# Instead of using range, use label encoder to provide options
+#  label encoder to provide options
 quality_options = label_encoder.classes_
 quality = st.selectbox('Quality', options=quality_options)
 
@@ -70,5 +70,4 @@ if st.button('Predict Type of Wine'):
     prediction, probability = predict_wine_type(features)
     st.write(f'Predicted Wine Type: {"Red" if prediction[0] == 0 else "White"} with a probability of {probability:.2f}')
 
-# Ensure the feature names match those used when training the model
-# Also ensure that the file paths are correct
+
