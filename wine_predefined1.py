@@ -6,7 +6,7 @@ import joblib
 st.set_page_config(page_title="Wine Type Prediction- ML assighmenet - Omar altarakieh", layout="wide")
 
 # Load the dataset
-@st.cache_data
+@st.cache_resource
 def load_data():
     data = pd.read_csv('wine_fraud.csv')
     # If any preprocessing is to be done, it can be added here
