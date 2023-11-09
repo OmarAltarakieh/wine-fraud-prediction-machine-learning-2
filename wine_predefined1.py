@@ -14,7 +14,7 @@ def load_data():
 wine_data = load_data()
 
 #  the trained RandomForest model
-model = joblib.load('wine_rf_clf_8-11.pkl')
+model = joblib.load('wine_rf_clf_8-11.joblib')
 
 #  the label encoder
 label_encoder = joblib.load('label_encoder.pkl')  # Ensure this is the correct path to your label encoder file
