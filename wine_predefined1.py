@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 
-st.set_page_config(page_title="Wine Type Prediction- ML assighmenet - Omar altarakieh", layout="wide")
+st.set_page_config(page_title=" Wine Type Prediction- ML assighmenet - Omar altarakieh ", layout="wide")
 
 #  dataset
 @st.experimental_memo
@@ -27,7 +27,7 @@ def predict_wine_type(features):
     return prediction, probability
 
 # Title and introduction to the app
-st.title("Wine Type Prediction App")
+st.title("Wine Type Prediction App - ML assighmenet - Omar altarakieh")
 st.write("Input the wine features to predict the type of wine (red or white).")
 
 # Collecting user inputs for each feature
