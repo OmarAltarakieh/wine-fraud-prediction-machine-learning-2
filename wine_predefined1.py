@@ -17,7 +17,7 @@ wine_data = load_data()
 model = joblib.load('wine_rf_clf_8-11.joblib')
 
 #  the label encoder
-label_encoder = joblib.load('label_encoder.joblib')  # Ensure this is the correct path to your label encoder file
+label_encoder = joblib.load('label_encoder.joblib')  
 
 # Define a function to make predictions
 def predict_wine_type(features):
