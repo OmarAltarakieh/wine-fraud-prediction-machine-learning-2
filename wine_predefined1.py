@@ -28,6 +28,7 @@ def predict_wine_type(features):
 
 # Title and introduction to the app
 st.title("Wine Type Prediction App - ML assighmenet - Omar altarakieh")
+st.write("IE MBD Apr 23 S1")
 st.write("Input the wine features to predict the type of wine (red or white).")
 
 # Collecting user inputs for each feature
