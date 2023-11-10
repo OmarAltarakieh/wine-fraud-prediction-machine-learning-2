@@ -29,7 +29,7 @@ def predict_wine_type(features):
 # Title and introduction to the app
 st.title("Wine Type Prediction App - ML assighmenet - Omar altarakieh")
 st.write("IE MBD Apr 23 S1")
-st.write("Input the wine features to predict the type of wine (red or white).")
+st.write("Input the wine features to predict the type of wine (red or white), and the probability of being legit .")
 
 # Collecting user inputs for each feature
 fixed_acidity = st.number_input('Fixed Acidity', min_value=0.0, format="%.2f")
