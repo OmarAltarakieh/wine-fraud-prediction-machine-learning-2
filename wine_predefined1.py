@@ -19,7 +19,7 @@ model = joblib.load('wine_rf_clf_8-11.joblib')
 #  the label encoder
 label_encoder = joblib.load('label_encoder.joblib')  
 
-# Define a function to make predictions
+# The function to make predictions
 def predict_wine_type(features):
     features_df = pd.DataFrame(features, index=[0])
     prediction = model.predict(features_df)
@@ -65,7 +65,7 @@ if st.button('Predict Type of Wine'):
         'pH': pH,
         'sulphates': sulphates,
         'alcohol': alcohol,
-        'quality': encoded_quality  # Use the encoded quality
+        'quality': encoded_quality  
     }
     prediction, probability = predict_wine_type(features)
     st.write(f'Predicted Wine Type: {"Red" if prediction[0] == 0 else "White"} with a probability of {probability:.2f}')
